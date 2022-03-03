@@ -13,7 +13,7 @@ from datetime import datetime
 def edit_wallpaper(side, path):
     if side == "left":
         print("Change left wallpaper")
-        screen_size = (1280, 1024)
+        screen_size = (1920, 1080)
     elif side == 'right':
         print("Change right wallpaper")
         screen_size = (1920, 1080)
@@ -58,9 +58,9 @@ def edit_wallpaper(side, path):
         print(crop_value)
         cropped_wp = resized_wp[crop_value:crop_value + screen_size[1], 0:screen_size[0]]
     if side == 'left':
-        currentwp[56:1080, 0:1280] = cropped_wp
+        currentwp[0:1080, 0:1920] = cropped_wp
     if side == 'right':
-        currentwp[0:1080, 1280:3200] = cropped_wp
+        currentwp[0:1080, 1920:3840] = cropped_wp
 
 
 def setLogger(name):
