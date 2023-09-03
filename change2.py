@@ -110,6 +110,7 @@ log = setLogger("change_2")
 if len(sys.argv) > 1:
     mode = sys.argv[1]
     print(sys.argv[1])
+    log.debug(sys.argv[1])
     if mode != 'left' and mode != 'right' and mode != 'both':
         print("Error")
         exit(1)
